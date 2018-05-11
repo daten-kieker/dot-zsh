@@ -1,0 +1,17 @@
+function a()
+{
+    # функция для запуска других функций,
+    # подгруженных из локального файлика .commands
+    # для инсталляции надо просто добавить ее в ~/.bashrc
+    # а в директории проекта создать файл .commands
+    # с нужными функциями
+ 
+    if [ -e .commands ]; then
+        source .commands
+        COMMAND=$1
+        shift
+        $COMMAND $@ || return $!
+    else
+        echo 'File ".commands" not found.'
+    fi
+}

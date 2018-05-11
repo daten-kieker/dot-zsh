@@ -1,0 +1,31 @@
+# to run BASH and force it do not start zsh again
+alias bash='RUN_BASH=1 /bin/bash'
+
+# ls aliases
+if [ ! $(uname) = 'Darwin' ]; then
+    alias ls='ls --color'
+fi
+
+# пропускать цвет через less
+alias less='less -r'
+
+alias l='ls'
+alias ll='ls -l -h'
+alias la='ls -a'
+alias llt='ll -t'
+alias llth='ll -t | head'
+alias lla='ll -a'
+
+alias history-refresh='fc -RI'
+
+alias i=invoke
+
+alias gen-ssh-config='cat ~/.ssh/config.d/* > ~/.ssh/config'
+alias gen-hosts='sudo bash -c "cat /etc/hosts.d/* > /etc/hosts"'
+
+# create a new dir
+# and change current dir to it
+function mk () {
+    mkdir -p "$1"
+    cd "$1"
+}
