@@ -1,0 +1,1 @@
+export MESOS_NATIVE_JAVA_LIBRARY=/usr/local/lib/libmesos.dylib
