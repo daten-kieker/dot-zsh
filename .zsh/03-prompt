@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/usr/bin/env zsh
 #
 # vi-mode colour changing
 #   http://www.zsh.org/mla/users/2006/msg01196.html

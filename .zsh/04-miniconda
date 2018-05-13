@@ -1,2 +1,2 @@
-export PATH=/usr/local/miniconda3/bin:${HOME}/bin
+export PATH=$PATH:/usr/local/miniconda3/bin:${HOME}/bin
 
