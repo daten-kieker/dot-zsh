@@ -1,0 +1,7 @@
+# inspired by https://theptrk.com/2018/07/11/did-txt-file/
+
+export DIDFILE=$HOME/did.txt
+did(){
+    echo $(date -u) $USER "$*" >> $DIDFILE
+}
+
